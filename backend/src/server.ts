@@ -22,6 +22,10 @@ const prisma = new PrismaClient();
  * Body: request.body (Dados para criação ou alteração de um registro)
  */
 
+app.get('/', async (request, response) => {
+    return response.json("Server is running");
+});
+
 app.get('/games', async (request, response) => {
     const games = await prisma.game.findMany({
         include: {
