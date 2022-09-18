@@ -1,57 +1,49 @@
-# 🚀 Getting started with Strapi
+# Backend
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+## Entidades
 
-### `develop`
+### Games
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
+* id
+* title
+* bannerUrl
 
-```
-npm run develop
-# or
-yarn develop
-```
+### Ad
 
-### `start`
+* id
+* gameId
+* name
+* yearsPlaying
+* discord
+* weekDays
+* hoursStart
+* hoursEnd
+* useVoiceChannel
+* Created_at
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
+### Casos de uso
 
-```
-npm run start
-# or
-yarn start
-```
+1. [x] Listagem dos games com a quantidade de anúncios;
+2. [x] Cadastro de um ad;
+3. [x] Listagem dos ads de um game;
+4. [x] Buscar discord pelo id do ad;
 
-### `build`
+## TODO'S
+- Cadastro de um game;
+- Integrar o login com o discord;
+- Criar uma entidade para usuário com perfil do discord;
+- editar/excluir Ads;
+- Pensar num tipo de throttle para evitar flood de ads, com cors será que precisa?
+- Validar cadastramento de ads, sugerido Zod como biblioteca de validação;
+- Pensar no campo discordId se não poderia ser **único** por gameId
 
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+## Games cadastrados
+Valorant https://static-cdn.jtvnw.net/ttv-boxart/516575-285x380.jpg
+League of Legends https://static-cdn.jtvnw.net/ttv-boxart/21779-285x380.jpg
+Dota 2 https://static-cdn.jtvnw.net/ttv-boxart/29595-285x380.jpg
+CS:GO https://static-cdn.jtvnw.net/ttv-boxart/32399-285x380.jpg
+Overwatch https://static-cdn.jtvnw.net/ttv-boxart/488552-285x380.jpg
+Apex Legends https://static-cdn.jtvnw.net/ttv-boxart/511224-285x380.jpg
+Fortnite https://static-cdn.jtvnw.net/ttv-boxart/33214-285x380.jpg
+Teamfight Tactics https://static-cdn.jtvnw.net/ttv-boxart/513143-285x380.jpg
+Fall Guys https://static-cdn.jtvnw.net/ttv-boxart/509658-285x380.jpg

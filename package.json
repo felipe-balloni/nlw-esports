@@ -5,12 +5,14 @@
     "private": true,
     "workspaces": [
         "backend",
+        "eslint-config",
         "frontend",
-        "eslint-config"
+        "mobile"
     ],
     "scripts": {
-        "develop:backend": "yarn --cwd backend develop",
-        "develop:frontend": "wait-on http://localhost:1337/admin && yarn --cwd frontend vite",
+        "develop:backend": "yarn --cwd backend dev",
+        "develop:frontend": "wait-on http://localhost:3000 && yarn --cwd frontend dev",
+        "develop:mobile": "wait-on http://localhost:3000 && yarn --cwd mobile start",
         "develop": "cross-env FORCE_COLOR=1 npm-run-all -l -p develop:*",
         "test": "jest",
         "test:watch": "jest --watchAll",
